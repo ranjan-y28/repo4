@@ -1,2 +1,16 @@
 package dem.pro1;
 
+
+
+import java.lang.Number;
+import dem.ResultOp;
+import java.lang.Double;
+
+rule "testrl"
+	dialect "mvel"
+	when
+		rl : ResultOp( amount != null )
+	then
+	
+		
+end
