@@ -9,6 +9,6 @@ rule "rl2"
 		ResultOp( amount != null )
 	then
 		ResultOp fact0 = new ResultOp();
-		fact0.setAmount( eval(fact0.getAmount()-100.00) );
+		fact0.setAmount( (fact0.getAmount()-100.00) );
 		insert( fact0 );
 end
