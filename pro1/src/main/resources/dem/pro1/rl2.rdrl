@@ -1,9 +1,14 @@
 package dem.pro1;
 
 import java.lang.Number;
+import dem.ResultOp;
 
 rule "rl2"
 	dialect "mvel"
 	when
+		ResultOp( amount != null )
 	then
+		ResultOp fact0 = new ResultOp();
+		fact0.setAmount( eval(amount-100) );
+		insert( fact0 );
 end
