@@ -11,6 +11,6 @@ rule "testrl"
 	when
 		rl : ResultOp( amount != null )
 	then
-	rl.setAmount();
+	rl.setAmount(100);
 		
 end
