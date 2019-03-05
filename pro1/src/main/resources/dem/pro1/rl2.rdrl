@@ -7,9 +7,9 @@ import java.lang.Double;
 rule "rl2"
 	dialect "mvel"
 	when
-		ResultOp( amount != null )
+		rl : ResultOp( amount != null )
 	then
-		ResultOp fact0 = new ResultOp();
-		fact0.setAmount( 100 );
-		insert( fact0 );
+		modify( rl ) {
+				setAmount( "100" )
+		}
 end
