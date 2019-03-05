@@ -2,6 +2,7 @@ package dem.pro1;
 
 import java.lang.Number;
 import dem.ResultOp;
+import java.lang.Double;
 
 rule "rl2"
 	dialect "mvel"
