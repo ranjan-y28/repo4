@@ -10,7 +10,7 @@ public class ResultOp implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String name;
-   private java.lang.String amount;
+   private Double amount;
 
    public ResultOp()
    {
@@ -26,17 +26,17 @@ public class ResultOp implements java.io.Serializable
       this.name = name;
    }
 
-   public java.lang.String getAmount()
+   public java.lang.Double getAmount()
    {
       return this.amount;
    }
 
-   public void setAmount(java.lang.String amount)
+   public void setAmount(java.lang.Double amount)
    {
       this.amount = amount;
    }
 
-   public ResultOp(java.lang.String name, java.lang.String amount)
+   public ResultOp(java.lang.String name, java.lang.Double amount)
    {
       this.name = name;
       this.amount = amount;
