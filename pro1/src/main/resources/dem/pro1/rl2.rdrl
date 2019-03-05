@@ -10,6 +10,6 @@ rule "rl2"
 		rl : ResultOp( amount != null )
 	then
 		modify( rl ) {
-				setAmount( rl.getAmount() )
+				setAmount( rl.getAmount()*.05 )
 		}
 end
