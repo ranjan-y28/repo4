@@ -5,10 +5,10 @@ import java.lang.Number;
 rule "validateAge"
 	dialect "mvel"
 	when
-		GeneralDetail( age < 18 )
+		GeneralDetail( age == null || age < 18 )
 	then
 		Messages fact0 = new Messages();
-		fact0.setMessage( "Age below 18 is not eligible for the policy" );
+		fact0.setMessage( "Age cannot be null or  below 18 years for this policy" );
 		fact0.setMessageCode( 101 );
 		insertLogical( fact0 );
 end
