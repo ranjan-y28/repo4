@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "validateSumInsured"
 	dialect "mvel"
 	when
+		GeneralDetail( sumInsured > 200000.0 )
 	then
+		Messages fact0 = new Messages();
+		fact0.setMessage( "SumInsured is high ,will require UnderWriter approval" );
+		insert( fact0 );
 end
