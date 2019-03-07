@@ -14,6 +14,8 @@ public class GeneralDetail implements java.io.Serializable
 
    private java.lang.String sex;
 
+   private java.lang.Double sumInsured;
+
    public GeneralDetail()
    {
    }
@@ -48,12 +50,23 @@ public class GeneralDetail implements java.io.Serializable
       this.sex = sex;
    }
 
+   public java.lang.Double getSumInsured()
+   {
+      return this.sumInsured;
+   }
+
+   public void setSumInsured(java.lang.Double sumInsured)
+   {
+      this.sumInsured = sumInsured;
+   }
+
    public GeneralDetail(java.lang.String name, java.lang.Integer age,
-         java.lang.String sex)
+         java.lang.String sex, java.lang.Double sumInsured)
    {
       this.name = name;
       this.age = age;
       this.sex = sex;
+      this.sumInsured = sumInsured;
    }
 
 }
