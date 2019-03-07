@@ -8,8 +8,12 @@ rule "rl2"
 	dialect "mvel"
 	when
 		rl : ResultOp( amount != null )
+		ReInsurance( rate != null )
 	then
 		modify( rl ) {
-				setAmount( rl.getAmount()*.05 )
+				setAmount( rl.getAmount()*0.5 )
 		}
+		Premium fact0 = new Premium();
+		fact0.setTotalPremium( rl.getAmount()+ (rl.getAmount()*0.5) );
+		insert( fact0 );
 end
