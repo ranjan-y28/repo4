@@ -8,6 +8,7 @@ import java.lang.Double;
 
 rule "testrl"
 	dialect "mvel"
+	enabled true
 	when
 		rl : ResultOp( amount != null )
 	then
