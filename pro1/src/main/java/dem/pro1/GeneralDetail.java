@@ -12,6 +12,8 @@ public class GeneralDetail implements java.io.Serializable
    private java.lang.String name;
    private java.lang.Integer age;
 
+   private java.lang.String sex;
+
    public GeneralDetail()
    {
    }
@@ -36,10 +38,22 @@ public class GeneralDetail implements java.io.Serializable
       this.age = age;
    }
 
-   public GeneralDetail(java.lang.String name, java.lang.Integer age)
+   public java.lang.String getSex()
+   {
+      return this.sex;
+   }
+
+   public void setSex(java.lang.String sex)
+   {
+      this.sex = sex;
+   }
+
+   public GeneralDetail(java.lang.String name, java.lang.Integer age,
+         java.lang.String sex)
    {
       this.name = name;
       this.age = age;
+      this.sex = sex;
    }
 
 }
