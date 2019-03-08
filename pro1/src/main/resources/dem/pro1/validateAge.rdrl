@@ -8,7 +8,7 @@ rule "validateAge"
 		GeneralDetail( age == null || age < 18 )
 	then
 		Messages fact0 = new Messages();
-		fact0.setMessage( "Age cannot be null or  below 18 years for this policy" );
+		fact0.setMessage( "Age cannot be null or  below  years for this policy" );
 		fact0.setMessageCode( 101 );
 		insertLogical( fact0 );
 end
