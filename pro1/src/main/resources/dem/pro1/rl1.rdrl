@@ -10,6 +10,6 @@ rule "rl1"
 		Customer( name == "ee" )
 	then
 		ResultOp fact0 = new ResultOp();
-		fact0.setAmount( 1000 );
+		fact0.setAmount( 2000 );
 		insert( fact0 );
 end
